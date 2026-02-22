@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I MISS YOU</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(45deg,#ff9a9e,#fad0c4,#fad0c4,#ffdde1);
+    background-size:400% 400%;
+    animation:bgMove 10s infinite alternate;
+    overflow:hidden;
+    font-family:Arial;
+    text-align:center;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+h1{
+    font-size:50px;
+    color:white;
+    text-shadow:0 0 20px rgba(255,255,255,0.8);
+    animation:glow 2s infinite alternate;
+}
+
+p{
+    font-size:24px;
+    color:white;
+    max-width:600px;
+    margin-top:20px;
+    animation:fadeIn 3s ease-in-out;
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px white;}
+    to{text-shadow:0 0 30px pink;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:float 5s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+
+button{
+    margin-top:30px;
+    padding:15px 40px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d6d;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ff4d6d;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>กลับมาคืนดีกันได้ไหม 💕</h1>
+
+<p>
+เรารู้ว่าเราพลาดไป  
+แต่ทุกอย่างที่เราทำ มันมาจากความรักจริง ๆ  
+ขอโอกาสอีกครั้งได้ไหม  
+เราไม่อยากเสียเธอไปเลย 🤍
+จุ๊ฟฟฟฟฟฟฟฟฟฟ
+</p>
+
+<button onclick="alert('ขอบคุณที่ให้โอกาสนะ 💖')">
+ให้โอกาสอีกครั้ง
+</button>
+
+<script>
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=Math.random()*20+20+"px";
+    heart.style.animationDuration=Math.random()*3+2+"s";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Lovele</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+.container{
+    background:rgba(255,255,255,0.2);
+    padding:50px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+.btn{
+    padding:12px 25px;
+    background:white;
+    color:#ff6f91;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#ff6f91;
+    color:white;
+    transform:scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💖 Welcome to Lovele</h1>
+    <p>ที่ที่เต็มไปด้วยความรัก ความอบอุ่น และรอยยิ้ม</p>
+    <p>ผู้ส่ง นายระพีภัทร จำปาแก้ว </p>
+    <p>ผู้รับ นางสาวภัทรศยา รักษาดี</p>
+
+    <button class="btn" onclick="openLove()">เริ่มต้นความรักครั้งใหม่</button>
+</div>
+
+<script>
+function openLove(){
+    window.open("gallery.html","_blank");
+}
+</script>
+
+</body>
+</html>
